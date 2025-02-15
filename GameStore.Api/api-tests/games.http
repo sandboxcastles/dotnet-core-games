@@ -5,7 +5,7 @@ GET http://localhost:5126
 GET http://localhost:5126/games
 
 ### Game by id
-GET http://localhost:5126/games/2
+GET http://localhost:5126/games/3
 
 ### Game by id (bad)
 GET http://localhost:5126/games/-1
@@ -21,13 +21,45 @@ Content-Type: application/json
   "releaseDate": "2011-11-18"
 }
 
-### Update Game
-PUT http://localhost:5126/games/4
+### Add Game (Bad)
+POST http://localhost:5126/games
 Content-Type: application/json
 
 {
-  "name": "Minecraft",
+  "name": "MinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraftMinecraft",
   "genre": "Kids and Family",
-  "price": 9.99,
+  "price": 19.99,
   "releaseDate": "2011-11-18"
 }
+
+### Add Game (Bad)
+POST http://localhost:5126/games
+Content-Type: application/json
+
+{
+  "genre": "Kids and Family",
+  "price": 19.99,
+  "releaseDate": "2011-11-18"
+}
+
+### Update Game
+PUT http://localhost:5126/games/1
+Content-Type: application/json
+
+{
+    "name": "Street Fighter II Turbo",
+    "genre": "Fighting",
+    "price": 9.99,
+    "releaseDate": "1992-07-15"
+}
+
+### Update Game
+PUT http://localhost:5126/games/1
+Content-Type: application/json
+
+{
+    "name": "Street Fighter II Turbo"
+}
+
+### Delete Game
+DELETE http://localhost:5126/games/2
