@@ -1,0 +1,33 @@
+### Info
+GET http://localhost:5126
+
+### Games
+GET http://localhost:5126/games
+
+### Game by id
+GET http://localhost:5126/games/2
+
+### Game by id (bad)
+GET http://localhost:5126/games/-1
+
+### Add Game
+POST http://localhost:5126/games
+Content-Type: application/json
+
+{
+  "name": "Minecraft",
+  "genre": "Kids and Family",
+  "price": 19.99,
+  "releaseDate": "2011-11-18"
+}
+
+### Update Game
+PUT http://localhost:5126/games/4
+Content-Type: application/json
+
+{
+  "name": "Minecraft",
+  "genre": "Kids and Family",
+  "price": 9.99,
+  "releaseDate": "2011-11-18"
+}
